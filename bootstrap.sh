@@ -10,9 +10,9 @@ function doIt() {
 		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
-		--exclude "LICENSE.txt" \
+		--exclude "LICENSE" \
 		-avh --no-perms . ~;
-	source ~/.bash_profile;
+	source ~/.zprofile;
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

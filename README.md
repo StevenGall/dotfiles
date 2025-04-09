@@ -20,8 +20,8 @@ Minimal, reproducible, and pragmatic. These dotfiles are meant to:
 - Completion and history tuning
 
 ### Editor
-- **Neovim** or **VS Code** configuration
-- Plugin manager setup (e.g., `lazy.nvim`, `packer`, or `vim-plug`)
+- **VS Code** configuration
+- Plugin manager setup
 - Sensible defaults and key mappings
 
 ### Terminal
@@ -34,7 +34,7 @@ Minimal, reproducible, and pragmatic. These dotfiles are meant to:
 - Commit signing and diff highlighting
 
 ### Others
-- `starship.toml`, `fzf`, `ripgrep`, `bat`, and other CLI tools
+`ripgrep`, `bat`, and other CLI tools
 - System defaults (macOS tweaks)
 - Dev toolchains setup (JVM (Java, Scala, Kotlin), Node, Python, Go, etc.)
 
@@ -42,7 +42,19 @@ Minimal, reproducible, and pragmatic. These dotfiles are meant to:
 
 ## 🚀 Setup
 
+**Warning:** If you want to give these dotfiles a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what that entails. Use at your own risk!
+
+### Using Git and the bootstrap script
+
+You can clone the repository wherever you want. (I like to keep it in `~/git/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
+
+
 ### Automated
+To install, `cd` into your local `dotfiles` repository (Wherever that may be, in my case `~/git/dotfiles`) and then:
+
+```zsh
+source bootstrap.sh
+```
 
 
 🙋‍♂️ About
