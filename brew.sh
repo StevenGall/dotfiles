@@ -115,8 +115,7 @@ brew install docker-compose
 brew install kubectl
 #Kubectx is helpful for multi-cluster installations, where you need to switch context between one cluster and another. Rather than type a series of lengthy kubectl command, kubectx works it magic in one short command
 brew install kubectx
-#kubectl-view-allocations - A tool to help visualize Kubernetes resource allocations.
-brew install kubectl-view-allocations
+
 #stern is a tool for filtering and following Kubernetes logs.
 brew install stern
 #kubens is helpful for switching between Kubernetes namespaces.
@@ -149,10 +148,6 @@ brew install intellij-idea-cli
 brew install datagrip
 #datagrip cli
 brew install datagrip-cli
-#pycharm
-brew install pycharm
-#pycharm cli
-brew install pycharm-cli
 
 #Python Node and Java Version Managers
 #(Python Version Manager): Similar to nvm for Python. Allows easy installation and switching between multiple Python versions. (Note: Requires separate setup after installation)

@@ -30,3 +30,21 @@ function extract() {
 function backup() {
     cp "$1" "$1.bak.$(date +%Y%m%d_%H%M%S)"
 }
+
+# Quick directory size
+function dirsize() {
+    du -sh "$1" 2>/dev/null || du -sh .
+}
+
+# Git functions
+function gco() {
+    git checkout "$@"
+}
+
+function gcb() {
+    git checkout -b "$@"
+}
+
+function gcm() {
+    git commit -m "$@"
+}

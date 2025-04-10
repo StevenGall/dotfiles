@@ -1,0 +1,11 @@
+# Machine-specific configurations
+# This file should not be committed to version control
+
+# Add machine-specific PATH modifications
+# export PATH="/path/to/machine/specific/bin:$PATH"
+
+# Add machine-specific aliases
+# alias machine-specific="command"
+
+# Add machine-specific environment variables
+# export MACHINE_SPECIFIC_VAR="value" 
