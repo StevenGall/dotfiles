@@ -11,7 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="ys"
 
 # Load additional configuration files
-for file in ~/.{aliases,functions,exports,path}; do
+for file in ~/.{aliases,functions,exports,path,local-overrides}; do
     [[ -f "$file" ]] && source "$file"
 done
 

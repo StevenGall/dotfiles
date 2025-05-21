@@ -52,10 +52,21 @@ You can clone the repository wherever you want. (I like to keep it in `~/git/dot
 ### Automated
 To install, `cd` into your local `dotfiles` repository (Wherever that may be, in my case `~/git/dotfiles`) and then:
 
-```zsh
-source bootstrap.sh
+```bash
+./bootstrap.sh
 ```
 
+```bash
+./ohmyz.sh
+```
+
+```bash
+./brew-install.sh
+```
+
+```bash
+./brew.sh
+```
 
 🙋‍♂️ About
 
