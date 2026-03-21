@@ -1,0 +1,44 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout:*)",
+      "Bash(python3:*)",
+      "Bash(git config:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(git remote:*)",
+      "Bash(gh pr:*)",
+      "Bash(git status:*)",
+      "Bash(git add:*)",
+      "Bash(git check-ignore:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "FILE=$(echo \"$CLAUDE_TOOL_INPUT\" | jq -r '.file_path // empty'); if [ -n \"$FILE\" ] && basename \"$FILE\" | grep -qE '^\\.(env|extra|local-overrides)$'; then echo 'BLOCK: This file contains machine-specific config and should not be edited via Claude'; exit 2; fi",
+            "statusMessage": "Checking for sensitive files..."
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "FILE=$(echo \"$CLAUDE_TOOL_INPUT\" | jq -r '.file_path // empty'); if [ -n \"$FILE\" ] && echo \"$FILE\" | grep -qE '\\.sh$' && command -v shfmt >/dev/null 2>&1; then shfmt -w \"$FILE\" 2>/dev/null; fi",
+            "statusMessage": "Auto-formatting shell script..."
+          }
+        ]
+      }
+    ]
+  }
+}

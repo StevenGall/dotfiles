@@ -81,6 +81,8 @@ brew install vbindiff
 brew install jq
 # Installs httpie, a command-line HTTP client that makes CLI requests easy.
 brew install httpie
+# Installs shfmt, a shell script formatter for bash/zsh/sh scripts.
+brew install shfmt
 # Installs htop, an interactive process viewer for Unix systems.
 brew install htop
 # Installs a command-line tool for managing Docker containers and images.
