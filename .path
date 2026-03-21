@@ -3,5 +3,5 @@ export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
-# Add local bin to PATH
-export PATH="$HOME/.local/bin:$PATH" 
+# Volta
+export PATH="$HOME/.volta/bin:$PATH"
