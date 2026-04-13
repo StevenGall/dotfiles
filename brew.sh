@@ -95,6 +95,8 @@ brew install watch
 brew install awscli
 #GitHub CLI
 brew install gh
+#Sourcetree - Git GUI by Atlassian
+brew install --cask sourcetree
 
 #infrastructure tools
 brew install terraform 
@@ -131,25 +133,15 @@ brew install postgresql
 
 
 #Install mac windows management tools
-brew install rectangle
+brew install --cask rectangle
 
 #IDEs
 #VSCode
-brew install visual-studio-code
-#VSCode CLI
-brew install code-cli
-#Cursor
-brew install cursor
-#Cursor CLI
-brew install cursor-cli
+brew install --cask visual-studio-code
 #intellij idea
-brew install intellij-idea
-#intellij idea cli
-brew install intellij-idea-cli
+brew install --cask intellij-idea
 #datagrip
-brew install datagrip
-#datagrip cli
-brew install datagrip-cli
+brew install --cask datagrip
 
 #Python Node and Java Version Managers
 #(Python Version Manager): Similar to nvm for Python. Allows easy installation and switching between multiple Python versions. (Note: Requires separate setup after installation)
@@ -167,7 +159,7 @@ brew install gradle
 brew install sbt
 
 # A popular replacement for the default macOS Terminal application with many more features (split panes, profiles, triggers, better search, etc.)
-brew install iterm2
+brew install --cask iterm2
 
 #zsh is a powerful shell that is highly customizable and provides a rich set of features.
 brew install zsh
@@ -181,16 +173,31 @@ brew install zsh-autosuggestions
 brew install zsh-completions
 
 #Install browsers
-brew install google-chrome
-brew install firefox
+brew install --cask google-chrome
+brew install --cask firefox
 
 #Install chat tools
-brew install slack
-brew install zoom
+brew install --cask slack
+brew install --cask zoom
+#Claude - AI assistant
+brew install --cask claude
 
 #Install productivity tools
-brew install 1password
+brew install --cask 1password
 brew install 1password-cli
+#draw.io - Diagramming tool
+brew install --cask drawio
+
+#Hardware / Streaming tools
+#Elgato Control Center - Control Elgato devices
+brew install --cask elgato-control-center
+#Elgato Stream Deck - Stream Deck configuration
+brew install --cask elgato-stream-deck
+
+#Fonts
+brew install --cask font-roboto
+brew install --cask font-roboto-mono
+brew install --cask font-roboto-slab
 
 #Remove outdated versions from the cellar.
 brew cleanup
