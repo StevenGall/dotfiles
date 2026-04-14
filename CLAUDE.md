@@ -7,7 +7,7 @@ Dotfiles repo that mirrors `~/` via rsync. Every file/directory here (except exc
 ## Key Commands
 
 ```bash
-./bootstrap.sh        # rsync dotfiles to ~/ (excludes .git, .DS_Store, bootstrap.sh, README.md, LICENSE)
+./bootstrap.sh        # rsync dotfiles to ~/ (excludes .git, .DS_Store, .osx, bootstrap.sh, README.md, LICENSE)
 ./bootstrap.sh -f     # same but skip confirmation prompt
 source ~/.zprofile     # reload shell config after changes
 ```
@@ -31,12 +31,14 @@ source ~/.zprofile     # reload shell config after changes
 .zshrc / .zprofile    → Shell config (sourcing entry points)
 .aliases              → 60+ aliases (navigation, git, network, macOS)
 .functions            → Helper functions (mkcd, extract, backup, etc.)
-.exports              → Env vars (editor, history, locale, Node/Python)
-.path                 → PATH additions (Homebrew, ~/.local/bin, Volta)
+.exports              → Env vars (editor, history, locale, Android SDK)
+.path                 → PATH additions (Homebrew, ~/.local/bin, Volta, Android SDK)
 .wgetrc               → wget defaults
 .extra                → Machine-specific secrets — NEVER edit or track
 .local-overrides      → Machine-specific template — NEVER edit or track
-brew.sh               → Homebrew package installs (70+ packages)
+brew.sh               → Homebrew package installs (75+ packages)
+brew-install.sh       → Installs Homebrew itself
+ohmyz.sh              → Installs Oh My Zsh
 bootstrap.sh          → Deployment script (rsync to ~/)
 .claude/              → Claude Code config (settings, hooks, skills, agents)
 ```
@@ -54,7 +56,7 @@ Packages in `brew.sh` are grouped by category. When adding packages, place them 
 7. Kubernetes tools (kubectl, kubectx, stern, kubens)
 8. Databases and data tools (pgcli, postgresql)
 9. Mac windows management (rectangle)
-10. IDEs (VS Code, Cursor, IntelliJ, DataGrip + CLI variants)
+10. IDEs (VS Code, IntelliJ, DataGrip, Android Studio)
 11. Version Managers (pyenv, nvm, sdkman)
 12. Build tools (gradle, sbt)
 13. Shell (zsh, oh-my-zsh, plugins)
@@ -72,6 +74,14 @@ Each package gets a `#comment` above its `brew install` line.
 - **`settings.local.json` is force-tracked**: The global gitignore at `~/.config/git/ignore` blocks `**/.claude/settings.local.json`, but this repo force-tracks it with `git add -f`. Future changes show up in `git status` normally.
 - **Never edit `.extra` or `.local-overrides`**: These are machine-specific. A PreToolUse hook blocks edits to them.
 - **`shfmt` auto-formatting**: A PostToolUse hook runs `shfmt` on `.sh` files after edits. Install shfmt first: `brew install shfmt`.
+- **bootstrap.sh also excludes `.osx`**: Not just `.git`, `.DS_Store`, `bootstrap.sh`, `README.md`, `LICENSE`.
+- **brew.sh uses `--cask` for GUI apps**: Formulae are CLI tools; casks are `.app` bundles. Always use `brew install --cask` for GUI apps in `brew.sh`.
+- **`settings.local.json` churns**: Plugin hooks and session permissions accumulate per-session. Expect noisy diffs — commit intentionally, not reflexively.
+
+## Git Workflow
+
+- Always use feature branches — never commit directly to `main`
+- Open PRs for all changes
 
 ## Code Style
 
