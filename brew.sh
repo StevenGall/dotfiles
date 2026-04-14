@@ -142,6 +142,8 @@ brew install --cask visual-studio-code
 brew install --cask intellij-idea
 #datagrip
 brew install --cask datagrip
+#Android Studio - Android IDE
+brew install --cask android-studio
 
 #Python Node and Java Version Managers
 #(Python Version Manager): Similar to nvm for Python. Allows easy installation and switching between multiple Python versions. (Note: Requires separate setup after installation)
