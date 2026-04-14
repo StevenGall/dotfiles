@@ -33,6 +33,10 @@ export GPG_TTY=$(tty);
 export EDITOR='vim'
 export VISUAL='vim'
 
+# Android SDK
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+
 # Better ls colors
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export CLICOLOR=1
