@@ -12,7 +12,16 @@
       "Bash(gh pr:*)",
       "Bash(git status:*)",
       "Bash(git add:*)",
-      "Bash(git check-ignore:*)"
+      "Bash(git check-ignore:*)",
+      "Bash(claude:*)",
+      "Read(//Users/stevengall/.claude/**)",
+      "Bash(find ~/.claude/plugins -name *.json -o -name *.md)",
+      "Bash(CLAUDE_PLUGIN_ROOT=~/.claude/plugins/cache/claude-plugins-official/learning-output-style/unknown bash ~/.claude/plugins/cache/claude-plugins-official/learning-output-style/unknown/hooks-handlers/session-start.sh)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(CLAUDE_PLUGIN_ROOT=~/.claude/plugins/cache/claude-plugins-official/explanatory-output-style/unknown bash ~/.claude/plugins/cache/claude-plugins-official/explanatory-output-style/unknown/hooks-handlers/session-start.sh)",
+      "Bash(CLAUDE_PLUGIN_ROOT=~/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.6 bash ~/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.6/hooks/run-hook.cmd session-start)",
+      "Bash(brew list:*)",
+      "Bash(grep -E '^\\(1password|google-chrome|firefox|slack|zoom|oh-my-zsh\\)$')"
     ]
   },
   "hooks": {

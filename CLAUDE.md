@@ -61,6 +61,8 @@ Packages in `brew.sh` are grouped by category. When adding packages, place them 
 14. Browsers
 15. Chat tools
 16. Productivity tools
+17. Hardware / Streaming tools
+18. Fonts
 
 Each package gets a `#comment` above its `brew install` line.
 
