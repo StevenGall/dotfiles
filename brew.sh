@@ -89,6 +89,8 @@ brew install htop
 brew install grpcurl
 #watch is a command-line utility for monitoring the output of a command over time.
 brew install watch
+#pygments is a syntax highlighting library used by oh-my-zsh plugins like common-aliases.
+brew install pygments
 
 #Install vendor tools
 #AWS CLI

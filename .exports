@@ -30,8 +30,12 @@ export MANPAGER='less -X';
 export GPG_TTY=$(tty);
 
 # Environment variables
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='code --wait'
+export VISUAL='code --wait'
+
+# Android SDK
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
 
 # Android SDK
 export ANDROID_HOME="$HOME/Library/Android/sdk"

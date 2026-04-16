@@ -1,11 +1,26 @@
 {
-  "model": "opus",
+  "permissions": {
+    "allow": [
+      "Read(/Users/stevengall/git/**)",
+      "Edit(/Users/stevengall/git/**)",
+      "Write(/Users/stevengall/git/**)",
+      "Read",
+      "Glob",
+      "Grep",
+      "LS",
+      "ListMcpResourcesTool",
+      "ReadMcpResourceTool"
+    ],
+    "additionalDirectories": [
+      "/Users/stevengall/git"
+    ]
+  },
+  "model": "opus[1m]",
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
     "code-review@claude-plugins-official": true,
-    "github@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true,
     "feature-dev@claude-plugins-official": true,
     "playwright@claude-plugins-official": true,
@@ -18,13 +33,29 @@
     "claude-code-setup@claude-plugins-official": true,
     "ralph-loop@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
-    "explanatory-output-style@claude-plugins-official": true,
-    "learning-output-style@claude-plugins-official": true,
+    "explanatory-output-style@claude-plugins-official": false,
+    "learning-output-style@claude-plugins-official": false,
     "gopls-lsp@claude-plugins-official": true,
     "security-guidance@claude-plugins-official": true,
     "jdtls-lsp@claude-plugins-official": true,
     "chrome-devtools-mcp@claude-plugins-official": true,
-    "terraform@claude-plugins-official": true
+    "github@claude-plugins-official": true,
+    "m1-tools-skills@m1-agent-skills": true,
+    "swift-lsp@claude-plugins-official": true,
+    "slack@claude-plugins-official": true,
+    "m1-backend-skills@m1-agent-skills": true
+  },
+  "sandbox": {
+    "network": {
+      "allowedDomains": [
+        "m1.com",
+        "m1finance.com",
+        "m1.dev",
+        "m1finance.dev",
+        "cloudflare.com",
+        "amazon.com"
+      ]
+    }
   },
   "voiceEnabled": true
 }
