@@ -94,7 +94,8 @@
     "swift-lsp@claude-plugins-official": true,
     "slack@claude-plugins-official": true,
     "github@claude-plugins-official": true,
-    "figma@claude-plugins-official": true
+    "figma@claude-plugins-official": true,
+    "m1-backend-skills@m1-agent-skills": true
   },
   "sandbox": {
     "network": {
