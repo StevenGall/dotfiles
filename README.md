@@ -54,6 +54,7 @@ The `.claude/` directory contains [Claude Code](https://claude.com/claude-code) 
 | `settings.local.json` | Permissions (pre-approved commands) and hooks |
 | `skills/sync-dotfiles/` | `/sync-dotfiles` — bidirectional diff/sync between repo and `~/` |
 | `skills/add-brew-package/` | `/add-brew-package` — add packages to `brew.sh` in the correct section |
+| `skills/context7-mcp/` | Library docs lookup when training data may be stale: local installed source → Context7 → official docs → training data |
 | `agents/dotfiles-auditor.md` | Subagent that audits installed packages vs repo for drift |
 
 **Hooks:**
@@ -95,7 +96,7 @@ cd ~/git/dotfiles
 
 ### How It Works
 
-`bootstrap.sh` uses `rsync` to copy dotfiles from this repo into your home directory. It excludes `.git/`, `.DS_Store`, `bootstrap.sh`, `README.md`, and `LICENSE`. The directory structure mirrors `~/`, so a file at `dotfiles/.claude/settings.json` becomes `~/.claude/settings.json`.
+`bootstrap.sh` uses `rsync` to copy dotfiles from this repo into your home directory. It excludes repo-only files (`.git/`, `.DS_Store`, `.osx`, `bootstrap.sh`, `README.md`, `LICENSE`, `CLAUDE.md`, `AGENTS.md`, `.gitignore`) and machine-specific files (`.extra`, `.local-overrides`) so your live copies are never overwritten. The directory structure mirrors `~/`, so a file at `dotfiles/.claude/settings.json` becomes `~/.claude/settings.json`.
 
 ### Updating
 
@@ -110,7 +111,7 @@ To capture live config changes back into the repo, use the `/sync-dotfiles` Clau
 
 For settings that shouldn't be committed (API keys, work-specific aliases, etc.):
 - Edit `~/.extra` — sourced by `.zprofile` but not tracked by git
-- Edit `~/.local-overrides` — template included in repo for reference
+- Edit `~/.zshrc.local` — sourced by `.zshrc` if present, not tracked by git
 
 ---
 
