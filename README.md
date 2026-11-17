@@ -54,8 +54,7 @@ The `.claude/` directory contains [Claude Code](https://claude.com/claude-code) 
 | `settings.local.json` | Permissions (pre-approved commands) and hooks |
 | `skills/sync-dotfiles/` | `/sync-dotfiles` — bidirectional diff/sync between repo and `~/` |
 | `skills/add-brew-package/` | `/add-brew-package` — add packages to `brew.sh` in the correct section |
-| `skills/context7-mcp/` | Fetch current library docs via Context7 instead of relying on training data |
-| `rules/context7.md` | Always-apply rule: use Context7 for library/framework/API questions |
+| `skills/context7-mcp/` | Library docs lookup when training data may be stale: local installed source → Context7 → official docs → training data |
 | `agents/dotfiles-auditor.md` | Subagent that audits installed packages vs repo for drift |
 
 **Hooks:**

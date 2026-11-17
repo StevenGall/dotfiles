@@ -44,7 +44,6 @@ bootstrap.sh          → Deployment script (rsync to ~/)
 .claude/
   settings.json       → Global Claude Code settings (plugins, permissions, iTerm2 status hooks)
   settings.local.json → Hooks (sensitive-file guard, shfmt) + accumulated permissions
-  rules/              → Always-apply rules (context7.md)
   skills/             → sync-dotfiles, add-brew-package, context7-mcp
   agents/             → dotfiles-auditor
 ```
