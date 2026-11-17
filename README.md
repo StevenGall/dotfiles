@@ -97,7 +97,7 @@ cd ~/git/dotfiles
 
 ### How It Works
 
-`bootstrap.sh` uses `rsync` to copy dotfiles from this repo into your home directory. It excludes repo-only files (`.git/`, `.DS_Store`, `.osx`, `bootstrap.sh`, `README.md`, `LICENSE`, `CLAUDE.md`, `.gitignore`) and machine-specific files (`.extra`, `.local-overrides`) so your live copies are never overwritten. The directory structure mirrors `~/`, so a file at `dotfiles/.claude/settings.json` becomes `~/.claude/settings.json`.
+`bootstrap.sh` uses `rsync` to copy dotfiles from this repo into your home directory. It excludes repo-only files (`.git/`, `.DS_Store`, `.osx`, `bootstrap.sh`, `README.md`, `LICENSE`, `CLAUDE.md`, `AGENTS.md`, `.gitignore`) and machine-specific files (`.extra`, `.local-overrides`) so your live copies are never overwritten. The directory structure mirrors `~/`, so a file at `dotfiles/.claude/settings.json` becomes `~/.claude/settings.json`.
 
 ### Updating
 

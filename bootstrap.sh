@@ -12,6 +12,7 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE" \
 		--exclude "CLAUDE.md" \
+		--exclude "AGENTS.md" \
 		--exclude ".gitignore" \
 		--exclude ".extra" \
 		--exclude ".local-overrides" \
