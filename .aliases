@@ -94,7 +94,9 @@ alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[
 # Show active network interfaces
 alias ifactive="ifconfig | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*status: active'"
 # ping google via 8.8.8.8 not routing through DNS
-alias ping8="ping 8.8.8.8"
+alias ping8="ping -i 0.2 8.8.8.8"
+# ping local gateway 192.168.1.1
+alias pinglocal="ping -i 0.2 192.168.1.1"
 # Flush Directory Service cache
 alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 

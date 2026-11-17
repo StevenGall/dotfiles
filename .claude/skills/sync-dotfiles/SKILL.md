@@ -20,7 +20,12 @@ Compare the live dotfiles in the home directory against this repository and opti
    - `.path`
    - `.functions`
    - `.wgetrc`
-   - `.claude/settings.json`
+   - `.claude/settings.json` (normalize with `jq .` when capturing — iTerm2 rewrites it with escaped slashes)
+   - `.claude/settings.local.json`
+   - `.claude/rules/*`, `.claude/skills/*`, `.claude/agents/*` (also check `~/.claude/` for new ones not yet in the repo)
+   - `brew.sh`
+
+   Use file mtimes to determine direction: don't assume home is always newer.
 
 2. **Report phase**: Present a summary table showing which files differ and the direction of changes:
    - `SAME` — no differences
@@ -35,5 +40,7 @@ Compare the live dotfiles in the home directory against this repository and opti
 ## Important
 
 - Never sync `.extra` or `.local-overrides` — these are machine-specific by design
+- This repo is public: never capture skills or files with work-internal content, IDs, or secrets
+- Use `command cp -f` (`cp` is aliased to interactive)
 - Always show the diff before overwriting anything
 - After syncing, suggest running `source ~/.zprofile` if shell files changed

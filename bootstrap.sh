@@ -11,6 +11,10 @@ function doIt() {
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE" \
+		--exclude "CLAUDE.md" \
+		--exclude ".gitignore" \
+		--exclude ".extra" \
+		--exclude ".local-overrides" \
 		-avh --no-perms . ~;
 	source ~/.zprofile;
 }

@@ -1,5 +1,141 @@
 {
+  "autoUpdatesChannel": "latest",
+  "enabledPlugins": {
+    "agent-sdk-dev@claude-plugins-official": true,
+    "chrome-devtools-mcp@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "explanatory-output-style@claude-plugins-official": false,
+    "feature-dev@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "jdtls-lsp@claude-plugins-official": true,
+    "learning-output-style@claude-plugins-official": false,
+    "m1-infrastructure-skills@m1-agent-skills": true,
+    "m1-observability-skills@m1-agent-skills": true,
+    "m1-tools-skills@m1-agent-skills": true,
+    "playwright@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "ralph-loop@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "swift-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/stevengall/.config/iterm2/cc-status",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/stevengall/.config/iterm2/cc-status",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/stevengall/.config/iterm2/cc-status",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/stevengall/.config/iterm2/cc-status",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/stevengall/.config/iterm2/cc-status",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/stevengall/.config/iterm2/cc-status",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/stevengall/.config/iterm2/cc-status",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/stevengall/.config/iterm2/cc-status",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/stevengall/.config/iterm2/cc-status",
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/stevengall/.config/iterm2/cc-status",
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  },
+  "model": "opus[1m]",
   "permissions": {
+    "additionalDirectories": [
+      "/Users/stevengall/git"
+    ],
     "allow": [
       "Read(/Users/stevengall/git/**)",
       "Edit(/Users/stevengall/git/**)",
@@ -61,41 +197,7 @@
       "Bash(kubectl delete:*)",
       "Bash(terraform destroy:*)"
     ],
-    "defaultMode": "acceptEdits",
-    "additionalDirectories": [
-      "/Users/stevengall/git"
-    ]
-  },
-  "model": "opus[1m]",
-  "enabledPlugins": {
-    "superpowers@claude-plugins-official": true,
-    "frontend-design@claude-plugins-official": true,
-    "context7@claude-plugins-official": true,
-    "code-review@claude-plugins-official": true,
-    "code-simplifier@claude-plugins-official": true,
-    "feature-dev@claude-plugins-official": true,
-    "playwright@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true,
-    "claude-md-management@claude-plugins-official": true,
-    "commit-commands@claude-plugins-official": true,
-    "skill-creator@claude-plugins-official": true,
-    "pr-review-toolkit@claude-plugins-official": true,
-    "agent-sdk-dev@claude-plugins-official": true,
-    "claude-code-setup@claude-plugins-official": true,
-    "ralph-loop@claude-plugins-official": true,
-    "pyright-lsp@claude-plugins-official": true,
-    "explanatory-output-style@claude-plugins-official": false,
-    "learning-output-style@claude-plugins-official": false,
-    "gopls-lsp@claude-plugins-official": true,
-    "security-guidance@claude-plugins-official": true,
-    "jdtls-lsp@claude-plugins-official": true,
-    "chrome-devtools-mcp@claude-plugins-official": true,
-    "m1-tools-skills@m1-agent-skills": true,
-    "swift-lsp@claude-plugins-official": true,
-    "slack@claude-plugins-official": true,
-    "github@claude-plugins-official": true,
-    "figma@claude-plugins-official": true,
-    "m1-backend-skills@m1-agent-skills": true
+    "defaultMode": "acceptEdits"
   },
   "sandbox": {
     "network": {
@@ -109,6 +211,6 @@
       ]
     }
   },
-  "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
   "voiceEnabled": true
 }

@@ -140,6 +140,8 @@ brew install --cask rectangle
 #IDEs
 #VSCode
 brew install --cask visual-studio-code
+#Cursor - AI code editor
+brew install --cask cursor
 #intellij idea
 brew install --cask intellij-idea
 #datagrip

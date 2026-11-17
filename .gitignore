@@ -1,0 +1,4 @@
+# Machine-specific files: never commit (bootstrap.sh also excludes them from rsync)
+.extra
+.local-overrides
+.DS_Store
